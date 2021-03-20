@@ -91,10 +91,17 @@ img {
   font-weight: 700;
   letter-spacing: 0.03em;
   color: #2196f3;
+  animation-duration: 1000ms;
+  animation-delay: 1000ms;
 }
 
 .logo-header-part {
   color: #000000;
+}
+
+.logo:hover {
+  animation-iteration-count: infinite;
+  animation-duration: 1000ms;
 }
 
 .logo-footer-part {
@@ -443,11 +450,6 @@ img {
 .regular-customers {
   padding: 94px 0;
 }
-
-/* .regular-customers-item > .link {
-  display: block;
-  fill: #afb1b8;
-} */
 
 .regular-customers-list {
   display: flex;
