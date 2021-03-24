@@ -758,16 +758,19 @@ img {
   border-radius: 50%;
   background-color: #ffffff;
   cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-modal-icon {
   width: 18px;
   height: 18px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-modal-btn:hover .close-modal-icon {
+.close-modal-btn:hover,
+.close-modal-btn:focus {
   fill: var(--action-color);
+  border-color: var(--action-color);
 }
 
 .backdrop.is-hidden {
@@ -810,6 +813,7 @@ img {
   padding: 10px 10px 10px 35px;
   width: 448px;
   height: 40px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus + .modal-icon,
@@ -825,6 +829,7 @@ img {
   height: 120px;
   padding: 11px 15px;
   resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment-field::placeholder {
@@ -852,6 +857,7 @@ img {
   height: 18px;
   top: 11px;
   left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .agreement-box {
@@ -860,11 +866,6 @@ img {
   margin-top: 20px;
 }
 
-/* .agreement-input {
-  appearance: none;
-  position: absolute;
-} */
-
 .agreement-checkbox {
   display: inline-block;
   margin-right: 8px;
@@ -872,7 +873,8 @@ img {
   height: 15px;
   border: 2px solid #212121;
   border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .agreement-input:checked + .agreement-checkbox {
@@ -880,6 +882,10 @@ img {
   background-image: url(../images/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
+  border-color: var(--action-color);
+}
+
+.agreement-input:focus + .agreement-checkbox {
   border-color: var(--action-color);
 }
 
